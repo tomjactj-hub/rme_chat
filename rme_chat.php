@@ -632,6 +632,11 @@ $ich_bin_der_wahre_boss_gaming = ($automatisch_is_leitung === true || $automatis
         <span id="rme-quiz-save-status" style="font-size: 13px; font-weight: bold;"></span>
     </div>
 </div>
+<!-- 📣 MOD-TOOL FEATURE: GRUSSBOX-SPIEGEL-TICKER -->
+<div style="margin-top: 4px; padding-top: 4px; border-top: 1px dashed rgba(255,255,255,0.1);">
+    <input type="text" id="rme_mod_gruss" placeholder="Grußtext aus der Wunschbox..." class="rme-countdown-field" style="width: 100% !important; margin-bottom: 3px !important; font-size: 11px !important; padding: 3px !important; border: 1px solid #00ff66 !important; color: #00ff66 !important;">
+    <button type="button" onclick="var g = document.getElementById('rme_mod_gruss').value.trim(); if(g !== '') { rmeSendeGamingAktion('spiegel_gruss|' + g); document.getElementById('rme_mod_gruss').value = ''; }" class="rme-popup-game-trigger" style="width: 100% !important; background: #004D40 !important; color: #00ff66 !important; border: 1px solid #00ff66 !important; padding: 4px !important; font-size: 11px !important; font-weight: bold !important; margin: 0 !important; box-shadow: 0 0 5px rgba(0,255,102,0.3) !important;">📣 Gruß in den Chat spiegeln</button>
+</div>
 
             </div> <!-- Schließt rme-mod-tools-sub -->
  
@@ -1561,6 +1566,10 @@ endif;
     <!-- Zeile 1: Glücksrad als voller Balken -->
     <button type="button" onclick="rmeSendeGamingAktion('spin_wheel'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-submit-btn rme-game-action-btn rme-btn-wheel" style="background: #7B1FA2 !important; color: #fff !important; margin: 0 !important; padding: 4px !important; font-size: 11px !important;">🎰 Glücksrad</button>
 </div>
+<!-- <div style="display: grid; grid-template-columns: 1fr; gap: 4px; margin-bottom: 4px;"> -->
+    <!-- Hörer-Danke-Feuerwerk als voller lila-funkelnder Balken -->
+<!--    <button type="button" onclick="rmeSendeGamingAktion('danke'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-submit-btn rme-game-action-btn" style="background: #4A148C !important; color: #fff !important; margin: 0 !important; padding: 4px !important; font-size: 11px !important; font-weight: bold !important; border: 1px solid #7B1FA2 !important; box-shadow: 0 0 5px rgba(123,31,162,0.4) !important;">🎆 Danke-Feuerwerk zünden</button>
+</div> -->
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 4px;">
     <!-- Zeile 2, Links: Tic-Tac-Toe Arena (Dein funktionierender Netzhaut-Zünder!) -->
@@ -1635,6 +1644,7 @@ endif;
                 <button type="button" onclick="rmeSendeGamingAktion('play_slots'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-game-trigger" style="margin: 0 !important; padding: 4px !important; font-size: 11px !important; width: 100% !important;">🎰 Slots</button>
                 <button type="button" onclick="rmeSendeGamingAktion('guess_number'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-game-trigger" style="margin: 0 !important; padding: 4px !important; font-size: 11px !important; width: 100% !important;">🎮 Zahlen-Raten</button>
             </div>
+<!-- <button type="button" onclick="rmeSendeGamingAktion('vip_roulette'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-game-trigger" style="margin: 0 !important; padding: 4px !important; font-size: 11px !important; width: 100% !important; background: #00E676 !important; color: #000 !important; font-weight: bold !important;">🎨 VIP Roulette</button> -->
 
             <!-- 🔮 DIE MAGISCHE NEON-ORAKEL-KUGEL -->
             <div style="margin-top: 4px; padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.05);">
@@ -1652,6 +1662,7 @@ endif;
                 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
                     <div style="color: #ffed00; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">🃏 Karten-Arena</div>
                     
+
                     <span id="rme-karten-score" style="color: #00ffaa; font-size: 10px; font-weight: bold; margin: 2px 0 4px 0;">Siege: 0 | Pleiten: 0</span>
                     
                     <div id="rme-aktuelle-karte-anzeige" style="font-size: 20px; font-weight: bold; color: #fff; background: #111; border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 4px; display: inline-block; min-width: 60px; box-shadow: 0 0 8px rgba(0,255,170,0.2);">[ ? ]</div>
@@ -1677,6 +1688,14 @@ endif;
                 <button type="button" onclick="rmeSendeGamingAktion('hsound_buh'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-submit-btn rme-game-action-btn" style="background: #222 !important; color: #fff !important; margin: 0 !important; font-size: 11px !important; padding: 4px !important;">👎 Buh</button>
                 <button type="button" onclick="rmeSendeGamingAktion('hsound_trommel'); document.getElementById('rme-universal-gaming-popup').style.display='none';" class="rme-popup-submit-btn rme-game-action-btn" style="background: #222 !important; color: #fff !important; margin: 0 !important; font-size: 11px !important; padding: 4px !important;">🥁 Tusch</button>
             </div>
+<!-- 🃏 SCHWEBENDES ERGEBNIS-BANNER FÜR LANGE KARTEN-SPRÜCHE (0% PLATZVERBRAUCH IM MENÜ) -->
+<div id="rme-karten-banner-popup" style="display: none; position: fixed !important; top: 40% !important; left: 50% !important; transform: translate(-50%, -50%) !important; z-index: 999999999 !important; background: #12121a !important; padding: 15px !important; border-radius: 8px !important; color: #fff !important; text-align: center !important; width: 240px !important; border: 2px solid #00ffaa; box-shadow: 0 0 25px rgba(0,255,170,0.5) !important;">
+    <span onclick="document.getElementById('rme-karten-banner-popup').style.display='none';" style="position: absolute !important; top: 2px !important; right: 8px !important; color: #ff3333 !important; font-size: 18px !important; font-weight: bold !important; cursor: pointer !important; user-select: none !important;">×</span>
+    <div style="font-weight: bold !important; color: #ffed00 !important; margin-bottom: 8px !important; font-size: 11px !important; letter-spacing: 0.5px !important; text-transform: uppercase;">🃏 Karten-Duell Ergebnis</div>
+    
+    <!-- Hier schießt das JavaScript den langen, witzigen DB-Spruch rein -->
+    <div id="rme-karten-banner-text" style="font-size: 11px !important; line-height: 1.4 !important; color: #fff !important; margin-bottom: 2px !important; text-align: center !important;"></div>
+</div>
 
 <!-- Eingabefeld für den Namen -->
 <br><input type="text" id="nameEingabe" placeholder="Name eingeben...">
@@ -5895,7 +5914,7 @@ function rmeSendeGamingAktion(spielTyp) {
         return;
     }
 
-    // 🎯 FALL 1 & 2: Würfeln & Münze (Injektor für die Schreibleiste)
+// 🎯 FALL 1 & 2: Würfeln & Münze (Injektor für die Schreibleiste)
     if (spielTyp === 'roll_dice') {
         rmeInputFeld.value = "🎲 [SPIEL]: " + meinLiveName + " schwingt den Becher und würfelt eine " + (Math.floor(Math.random() * 6) + 1) + "!";
     } else if (spielTyp === 'flip_coin') {
@@ -5926,9 +5945,19 @@ function rmeSendeGamingAktion(spielTyp) {
     else if (spielTyp === 'start_card_game') { 
         rmeInputFeld.value = "/karte"; 
     }
-	
+    else if (spielTyp === 'danke') { 
+        rmeInputFeld.value = "/danke"; 
+    }
+    else if (spielTyp.startsWith('spiegel_gruss|')) {
+        var extrahierterGruss = spielTyp.replace('spiegel_gruss|', '');
+        rmeInputFeld.value = "/spiegel " + extrahierterGruss;
+    }
+    // 🎯 NEU: VIP Farb-Roulette in die Kette integriert!
+    else if (spielTyp === 'vip_roulette') {
+        rmeInputFeld.value = "/roulette";
+    }
     // =========================================================================
-    // 🎰 REPARIERT: LAUTLOSER GLÜCKSRAD-FUNK MIT ECHTER USER-ID FÜR RGB-FARBEN!
+    // 🎰 REPARIERT: LAUTLOSER GLÜCKSRAD-FUNK (Jetzt perfekt eingegliedert!)
     // =========================================================================
     else if (spielTyp === 'spin_wheel') {
         // 🚀 GLÜCKSRAD-EXPRESS: Wir funken direkt an die play_sound.php!
@@ -5942,10 +5971,10 @@ function rmeSendeGamingAktion(spielTyp) {
         
         var popup = document.getElementById('rme-universal-gaming-popup');
         if (popup) popup.style.display = 'none';
-        return;
+        return; // Verhindert, dass der leere Chat abgeschickt wird
     }
 
-    // Drückt vollautomatisch auf ENTER / SENDEN für Text-Befehle (Würfel, Münze, TTT)
+    // Drückt vollautomatisch auf ENTER / SENDEN für Text-Befehle (Würfel, Münze, TTT, Slots, Danke, Roulette)
     if (rmeSendeBtn) {
         rmeSendeBtn.click();
     } else {
@@ -6683,23 +6712,63 @@ function rmeKartenTippen(tipp) {
     if (tipp === 'hoeher' && neuerWert > alterWert) { gewonnen = true; }
     if (tipp === 'tiefer' && neuerWert < alterWert) { gewonnen = true; }
     
-    // Punkte zählen & Feedback texten
-    if (gewonnen) {
-        window.rmeKartenSiege++;
-        document.getElementById('rme-karten-feedback').innerHTML = "<span style='color:#00ffaa; font-weight:bold;'>🎉 GEWONNEN! Nächste war: " + kartenNamen[neuerWert] + "</span>";
-    } else {
-        window.rmeKartenNiederlagen++;
-        document.getElementById('rme-karten-feedback').innerHTML = "<span style='color:#ff3333; font-weight:bold;'>❌ LEIDER NEIN! Nächste war: " + kartenNamen[neuerWert] + "</span>";
-    }
+    // Punkte im Browser zählen
+    if (gewonnen) { window.rmeKartenSiege++; } else { window.rmeKartenNiederlagen++; }
     
-    // Neuen Wert speichern
+    // Neuen Wert speichern & UI im Menü sofort anpassen
     window.rmeAktuellerKartenWert = neuerWert;
-    
-    // UI umschalten für den Rundenwechsel
     document.getElementById('rme-aktuelle-karte-anzeige').innerHTML = kartenNamen[neuerWert];
     document.getElementById('rme-karten-score').innerHTML = "Siege: " + window.rmeKartenSiege + " | Pleiten: " + window.rmeKartenNiederlagen;
     document.getElementById('rme-karten-spiel-buttons').style.display = 'none';
     document.getElementById('rme-karten-reset-btn').style.display = 'block';
+    
+    // Das kleine Textfeld im Menü kriegt nur ein kurzes Feedback
+    var farbe = (gewonnen) ? '#00ffaa' : '#ff3333';
+    var standardText = (gewonnen) ? "🏆 Gewonnen!" : "❌ Leider nein!";
+    document.getElementById('rme-karten-feedback').innerHTML = "<span style='color:" + farbe + "; font-weight:bold;'>" + standardText + "</span>";
+    
+    // 🔍 JETZT DER BLITZ-TUNNEL ZUM SMILEY-HANDLER
+    var suchTyp = (gewonnen) ? 'card_win' : 'card_loss';
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open("POST", "rme_smilies_handler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            try {
+                var response = JSON.parse(xhr.responseText);
+                if (response && response.status === 'success' && response.phrase) {
+                    
+                    // 🛸 POPUP AUFWECKEN UND DIREKT ANSTEUERN!
+                    var popupFenster = document.getElementById('rme-karten-banner-popup');
+                    var popupTextfeld = document.getElementById('rme-karten-banner-text');
+                    
+                    if (popupFenster && popupTextfeld) {
+                        // Spruch aus der Datenbank einsetzen
+                        popupTextfeld.innerHTML = response.phrase;
+                        
+                        // Rahmenfarbe anpassen (Grün für Sieg, Rot für Verlust)
+                        popupFenster.style.borderColor = (gewonnen) ? '#00ffaa' : '#ff3333';
+                        popupFenster.style.boxShadow = (gewonnen) ? '0 0 25px rgba(0,255,170,0.5)' : '0 0 25px rgba(255,51,51,0.5)';
+                        
+                        // Das unsichtbare Fenster auf dem Bildschirm einblenden!
+                        popupFenster.style.display = 'block';
+                        
+                        // ⏱️ AUTO-CLOSE: Nach 5 Sekunden räumt es sich von alleine auf
+                        setTimeout(function() {
+                            popupFenster.style.display = 'none';
+                        }, 8000);
+                    }
+                }
+            } catch(e) {
+                console.log("Karten-Spruch konnte nicht im Popup geladen werden.");
+            }
+        }
+    };
+    
+    // Signal absenden
+    xhr.send("action=get_card_phrase&type=" + suchTyp + "&karte=" + encodeURIComponent(kartenNamen[neuerWert]));
 }
 
 function rmeKartenNaechsteRunde() {
